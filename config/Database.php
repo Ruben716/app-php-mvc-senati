@@ -1,5 +1,7 @@
 <?php
 
+include "config/config.php";
+
 class Database {
     private $host = DB_HOST ; 
     private $user = DB_USER ;
@@ -21,5 +23,6 @@ class Database {
         } catch (PDOException $e) {
             echo "Error  en la conexion de  database".$e->getMessage();
         }
+        return $this->conn;
 }
 }
