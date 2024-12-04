@@ -25,5 +25,24 @@ class AuthController {
     public function showRegister() {
         include 'views/auth/register.php';
 
-}
+}   
+    public function loging () {
+        header('Content-Type: application/json');
+
+        try {
+            throw new Exception('error del papus');
+            
+        } catch (Exception $e) {
+            echo json_encode([
+                'status' => 'error',
+                'message' => $e->getMessage()
+            ]);
+        }
+
+
+
+
+    }
+
+
 }

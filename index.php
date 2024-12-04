@@ -67,6 +67,10 @@ $public_routes =[
     $router->add('GET','/register','AuthController','showRegister');
 
 
+    $router->add('POST','auth/login','AuthController','loging');
+    $router->add('POST','auth/register','AuthController','register');
+
+
 // Despachar la ruta 
 
 try {
