@@ -47,7 +47,9 @@ $router = new Router();
 // agregar rutas
 
 $public_routes =[
-    '/web'
+    '/web',
+    '/login',
+    '/register',
 ];
 
 //obtener la ruta actual 
@@ -60,6 +62,9 @@ $public_routes =[
     // die($current_Route);
 
     $router->add('GET','/web','webController','index');
+    //loging y register
+    $router->add('GET','/login','AuthController','showLogin');
+    $router->add('GET','/register','AuthController','showRegister');
 
 
 // Despachar la ruta 
