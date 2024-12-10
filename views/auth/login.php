@@ -14,6 +14,10 @@ if (session_status() === PHP_SESSION_NONE) {
     <title>Login - Sistema de Productos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.2/lottie.min.js"></script>
+
+
     <style>
         /* Fondo general con degradado morado-azul */
         body {
@@ -79,12 +83,14 @@ if (session_status() === PHP_SESSION_NONE) {
                     <div class="card-body">
                         <h2 class="text-center mb-4">Iniciar Sesión</h2>
                         <div id="loginAlert"></div>
+                        
+
                         <form id="loginForm" onsubmit="login(event)">
                             <div class="mb-3">
                                 <label for="username" class="form-label">Usuario</label>
                                 <input type="text" class="form-control" id="username" >
                             </div>
-                            <div class="mb-3">
+                             <div class="mb-3">
                                 <label for="password" class="form-label">Contraseña</label>
                                 <input type="password" class="form-control" id="password" >
                             </div>
@@ -100,6 +106,8 @@ if (session_status() === PHP_SESSION_NONE) {
             </div>
         </div>
     </div>
+    <img id="animeDance" src="<?= BASE_URL ?>/assets/img/Animation - 1733843106833.gif" alt="Animación" style="width: 200px; height: 300px; margin: auto;">
     <script src="<?= BASE_URL ?>/assets/js/auth.js"></script>
+    
 </body>
 </html>
