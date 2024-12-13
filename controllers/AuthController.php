@@ -90,9 +90,26 @@ class AuthController {
         try {
             $data = json_decode(file_get_contents("php://input"));
             
+            if (empty($data->nombreCompleto) || empty($data->usuario) || empty($data->email) || empty($data->contraseña) || empty($data->confirmarContraseña)) {
+                throw new Exception('Todos los campos son obligatorios.');
+            }
+
             if ($data->contraseña !== $data->confirmarContraseña) {
                 throw new Exception('Las contraseñas no coinciden.');
             }
+            if($this->usuario->validaUsuario($data->usuario)){
+                throw new Exception('El nombre de usuario ya existe.');
+
+            }
+            if($this->usuario->validaCorreo($data->email)){
+                throw new Exception('El correo  ya existe.');
+
+            }
+            $this->usuario->register($data);
+
+
+            
+            
     
            
     
@@ -108,6 +125,9 @@ class AuthController {
         }
     }
     
+    }
+    
+    
 
 
-}
+

@@ -9,6 +9,7 @@ if (session_status() === PHP_SESSION_NONE) {
 <!-- views/auth/register.php -->
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,47 +21,64 @@ if (session_status() === PHP_SESSION_NONE) {
     <!-- <link href="<?= BASE_URL ?>/assets/css/style.css" rel="stylesheet"> -->
     <style>
         body {
-            background: linear-gradient(135deg, #6a11cb, #2575fc); /* Fondo con gradiente azul-violeta */
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            /* Fondo con gradiente azul-violeta */
             color: #f8f9fa;
             font-family: 'Arial', sans-serif;
         }
+
         .card {
             border: none;
             background-color: #ffffff;
             border-radius: 15px;
             box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
         }
+
         .card-body {
             color: #212529;
         }
+
         h2 {
-            color: #6a11cb; /* Violeta universal */
+            color: #6a11cb;
+            /* Violeta universal */
         }
+
         label {
-            color: #2575fc; /* Azul */
+            color: #2575fc;
+            /* Azul */
         }
+
         input {
-            border: 1px solid #6a11cb; /* Borde violeta */
+            border: 1px solid #6a11cb;
+            /* Borde violeta */
         }
+
         input:focus {
             outline: none;
             box-shadow: 0 0 5px #6a11cb;
         }
+
         button {
-            background-color: #2575fc; /* Azul */
+            background-color: #2575fc;
+            /* Azul */
             border: none;
         }
+
         button:hover {
-            background-color: #6a11cb; /* Violeta */
+            background-color: #6a11cb;
+            /* Violeta */
         }
+
         a {
             color: #6a11cb;
         }
+
         a:hover {
             color: #2575fc;
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="row justify-content-center mt-5">
@@ -81,6 +99,15 @@ if (session_status() === PHP_SESSION_NONE) {
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email</label>
                                 <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb3">
+                            <label for="email" class="form-label">rol</label>
+
+                                <select class="form-select" id="rol" aria-label="Default select example">
+                                    <option selected value="cliente">Cliente</option>
+                                    <option value="user">Usuario</option>
+                                    <option value="admin">administrador</option>
+                                </select>
                             </div>
                             <div class="mb-3">
                                 <label for="password" class="form-label">Contraseña</label>
@@ -104,4 +131,5 @@ if (session_status() === PHP_SESSION_NONE) {
     </div>
     <script src="<?= BASE_URL ?>/assets/js/auth.js"></script>
 </body>
+
 </html>

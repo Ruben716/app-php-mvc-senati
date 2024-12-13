@@ -55,6 +55,7 @@
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#team">Team</a></li>
           <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#login">login</a></li>
           <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="#">Dropdown 1</a></li>

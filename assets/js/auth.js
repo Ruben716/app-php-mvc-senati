@@ -45,7 +45,7 @@ async function login(event) {
             showConfirmButton: true
         });
         setTimeout(() => {
-            window.location.href = 'web';
+            window.location.href = 'home';
         }, 3000);
 
     } catch (error) {
@@ -68,6 +68,8 @@ async function register(e){
         const email = document.getElementById('email').value;
         const contraseña = document.getElementById('password').value;
         const confirmarContraseña = document.getElementById('confirm_password').value;
+        const rol = document.getElementById('rol').value;
+
 
         try {
             const respuesta = await fetch('auth/register', {
@@ -81,6 +83,7 @@ async function register(e){
                     email,
                     contraseña,
                     confirmarContraseña,
+                    rol,
 
                 })
             });

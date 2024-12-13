@@ -70,6 +70,15 @@ $public_routes =[
     $router->add('POST','auth/login','AuthController','loging');
     $router->add('POST','auth/register','AuthController','register');
 
+    //home controller
+    $router->add('GET','home','HomeController','index');
+
+    //crud productos 
+
+    $router->add('GET','productos/','ProductoController','index');
+    $router->add('GET','productos/obtener-todo','ProductoController','obtenerProducto');
+
+
 
 // Despachar la ruta 
 
